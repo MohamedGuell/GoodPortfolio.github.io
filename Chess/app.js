@@ -83,6 +83,7 @@ function dragOver(e) {
 function dragDrop(e) {
 e.stopPropagation()
 const soundP = document.querySelector('#pieceDsound')
+const takenP = document.querySelector('#pieceTsound')
 // console.log(e.target)
 //console.log(draggedEl)
 const correctGo = draggedEl.firstChild.classList.contains(playerMove)
@@ -97,6 +98,7 @@ if (correctGo) {
     if(takenByOppenent && valid) {
         e.target.parentNode.append(draggedEl)
         e.target.remove()
+        takenP.play()
         victory()
         nextPlayer()
         return
@@ -107,7 +109,7 @@ if (correctGo) {
         return
     }
     if (valid) {
-        soundP.play(0.2)
+        soundP.play()
         victory()
         e.target.append(draggedEl)
         nextPlayer()
@@ -127,7 +129,7 @@ switch(piece) {
     case 'pawn' :
         const starterRow = [8,9,10,11,12,13,14,15] // Pions donc le premier déplacement est différent
         if (
-        starterRow.includes(startId) && startId + width * 2 === targetId && !document.querySelector(`[square-id="${startId + width}"]`).firstChild && !document.querySelector(`[square-id="${startId + width * 2}"]`).firstChild || //peux avancer de 2 en avant si sur la case de départ OU
+        starterRow.includes(startId) && startId + width * 2 === targetId || //peux avancer de 2 en avant si sur la case de départ OU
         startId + width === targetId && !document.querySelector(`[square-id="${startId + width}"]`).firstChild  || // de 1 en avant OU
         startId + width + 1 === targetId && document.querySelector(`[square-id="${startId + width + 1}"]`).firstChild ||  
         startId + width - 1 === targetId && document.querySelector(`[square-id="${startId + width - 1}"]`).firstChild
