@@ -21,7 +21,6 @@ function createBoard() {
     startPieces.forEach((startPiece, i) => {
        const square = document.createElement('div')
        square.classList.add('square')
-       
        square.innerHTML = startPiece
 
 
@@ -71,6 +70,7 @@ function dragStart(e) {
     // console.log(e.target.parentNode.getAttribute('square-id'))
      startPositionId = e.target.parentNode.getAttribute('square-id') // enregistrer la pos. des pion avant déplacement
     draggedEl = e.target
+    
     // console.log(startIdPos)
 }
 
@@ -82,6 +82,7 @@ function dragOver(e) {
 
 function dragDrop(e) {
 e.stopPropagation()
+
 const soundP = document.querySelector('#pieceDsound')
 const takenP = document.querySelector('#pieceTsound')
 // console.log(e.target)
@@ -134,15 +135,17 @@ switch(piece) {
         startId + width + 1 === targetId && document.querySelector(`[square-id="${startId + width + 1}"]`).firstChild ||  
         startId + width - 1 === targetId && document.querySelector(`[square-id="${startId + width - 1}"]`).firstChild
     
-        ) {  
-            
-            startId + width === targetId // peux avancer de 1
+        ) { 
+             
             return true
+            
+        } else {
+            return false
         }
         
     case 'knight' :
         if (
-            startId + width * 2 + 1 === targetId ||
+            startId + (width * 2 + 1) === targetId ||
             startId + width * 2 - 1 === targetId ||
             startId + width + 2 === targetId ||
             startId + width - 2 === targetId || 
@@ -152,6 +155,8 @@ switch(piece) {
             startId - width - 2 === targetId 
         ) {
             return true
+        } else {
+            return false
         }
 
     case 'bishop' :
@@ -191,6 +196,8 @@ switch(piece) {
             
         ) {
                 return true
+        } else {
+            return false
         }
         case 'rook' :
             if (
@@ -228,8 +235,9 @@ switch(piece) {
                 startId - 7 === targetId && !document.querySelector(`[square-id="${startId - 1}"]`).firstChild && !document.querySelector(`[square-id="${startId - 2}"]`).firstChild && !document.querySelector(`[square-id="${startId - 3}"]`).firstChild && !document.querySelector(`[square-id="${startId - 4}"]`).firstChild && !document.querySelector(`[square-id="${startId - 5}"]`).firstChild && !document.querySelector(`[square-id="${startId - 6}"]`).firstChild
             ) {
                 return true
+            } else {
+                return false
             }
-
             case 'queen' :
                 if (
 
@@ -299,6 +307,8 @@ switch(piece) {
             startId - 7 === targetId && !document.querySelector(`[square-id="${startId - 1}"]`).firstChild && !document.querySelector(`[square-id="${startId - 2}"]`).firstChild && !document.querySelector(`[square-id="${startId - 3}"]`).firstChild && !document.querySelector(`[square-id="${startId - 4}"]`).firstChild && !document.querySelector(`[square-id="${startId - 5}"]`).firstChild && !document.querySelector(`[square-id="${startId - 6}"]`).firstChild
         ) {
             return true
+        } else {
+            return false
         }
         case 'king' :
             if (
