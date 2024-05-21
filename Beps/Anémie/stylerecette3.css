@@ -138,9 +138,7 @@ a{
     display: flex;
 }
 
-.liens {
-    display: flex;
-}
+
 
 .maladies .clique  {  /*  /* on modifie que les bouton dans la classe maladie  */
     background-color: #B3D78F; /* Couleur de fond des boutons "Liens" */
@@ -181,8 +179,7 @@ a{
     display: flex;
     justify-content: space-evenly;
     background-color: #B3D78F;
-    width: 100%;
-    margin-top: auto;
+    margin-top: 31.5vh;
     align-self: flex-end;
 }
 
@@ -310,7 +307,3 @@ h2 {
     margin: 10px;
 }
 
-.ligne  {
-    display: flex;
-    justify-content: end;
-}
