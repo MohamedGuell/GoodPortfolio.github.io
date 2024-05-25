@@ -287,3 +287,116 @@ a{
     justify-content: center;
     align-items: center;
   }
+
+
+  .phoneMenu {
+    display: none;
+}
+.Hmenu{
+    display: none;
+}
+
+
+@media(max-width:1800px){
+    .Header {
+        border: 10px ;
+        text-size-adjust: 2;
+    }
+    }
+    
+    @media(max-width:1730px){
+        .Header  {
+            background: none;
+            
+          .clique {
+            display: none;
+          }
+          button {
+            display: none;
+          }
+          
+          
+        }
+        .lCen {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            }
+    
+          .footer{
+            width: 100%;
+            a {
+                width: 90%;
+              }
+          }
+          
+        .phoneMenu {
+           
+            height: 20vh;
+            width: 200px;
+            max-width: 300px;
+            position: fixed;
+            top: 0;
+            right: -450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-style: 3rem;
+            transition: 0.3s ease;
+    
+            ul, li {
+                list-style-type: none;
+                font-size: small;
+                display: block;
+                justify-content: center;
+            }
+        }
+
+        .phoneMenu.active {
+            margin-top: 5px;
+            width: 50%;
+            
+            right: 0px;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            a {
+                display: flex;
+                padding: 5px;
+                justify-content: center;
+                
+            }
+            
+          }
+         
+    
+          .Hmenu {
+            
+            display: block;
+            text-decoration: none;
+            img{
+                height: 60px;
+                width: 55px;
+                border-radius: 5px;
+                position: absolute;
+                top: 10px;
+                left: 95.5%;
+            }
+           
+          }
+         .bg-b{
+            filter: blur(5px);
+         }
+        }
+
+        @media(max-width:970px){
+            .blocpapa1, .blocpapa2, .blocpapa3 {
+                display: block;
+            }
+            .footer {
+                display: none;
+               }
+            .blocpro1, .blocpro2, .blocpro3 {
+                width: 70%;
+            }
+        }
