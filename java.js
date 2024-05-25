@@ -37,7 +37,7 @@ for (const cardElement of cardElements) {
       secondChild.style.transform = "rotateX(0) rotateY(0)";
     });
   }
-
+/*
   for (const cardElement of cardElements) {
     const thirdChild = cardElement.children[2];
   
@@ -55,4 +55,4 @@ for (const cardElement of cardElements) {
     thirdChild.addEventListener("mouseleave", () => {
       thirdChild.style.transform = "rotateX(0) rotateY(0)";
     });
-  }
+  } */
