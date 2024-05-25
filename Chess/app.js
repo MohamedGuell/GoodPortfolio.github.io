@@ -3,6 +3,7 @@ const gameBoard = document.querySelector("#gameboard")
 const playerDisplay = document.querySelector("#player")
 const infoDisplay = document.querySelector("#info-display")
 const piece = document.querySelector("#piece")
+const txtBox = document.querySelector(".txtBox")
 const width = 8
 let playerMove = 'black'
 playerDisplay.textContent = 'noir'
@@ -359,13 +360,13 @@ function victory() {
     const kings = Array.from(document.querySelectorAll('#king'))
     if (!kings.some(king => king.firstChild.classList.contains('white'))) {
         playerDisplay.innerHTML = " "
-        infoDisplay.innerHTML = "Les noirs ont gagner !"
+        txtBox.innerHTML = "Les noirs ont gagner !"
         const allSquares = document.querySelectorAll('.square')
         allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
     }
     if (!kings.some(king => king.firstChild.classList.contains('black'))) {
         playerDisplay.innerHTML = " "
-        infoDisplay.innerHTML = "Les blancs ont gagner !"
+        txtBox.innerHTML = "Les blancs ont gagner !"
         const allSquares = document.querySelectorAll('.square')
         allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
     }
