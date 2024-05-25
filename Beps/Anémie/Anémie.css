@@ -1,10 +1,5 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0;
-}
-.container {
+
+.page {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -12,7 +7,16 @@ body {
     align-items: center;
     top: 25px;
     gap: 10px;
-    flex-grow: 1;
+   
+  }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 .rectangle {
@@ -32,6 +36,7 @@ body {
     border-radius: 10px;
     margin-bottom: -50px;
     background-color: #FFF4DD;
+    
 }
 
 .test-video
@@ -284,6 +289,186 @@ section:hover {
 .liens {
     display: flex;
 }
+.phoneMenu {
+    display: none;
+}
+.Hmenu{
+    display: none;
+}
 
 
+@media(max-width:1800px){
+    .Header {
+        border: 10px ;
+        text-size-adjust: 2;
+    }
+    }
+    
+    @media(max-width:1730px){
+        .Header  {
+            background: none;
+            
+          .clique {
+            display: none;
+          }
+          button {
+            display: none;
+          }
+          
+          
+        }
+        .lCen {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            }
+    
+          .footer{
+            width: 100%;
+            a {
+                width: 90%;
+              }
+          }
+          
+        .phoneMenu {
+           
+            height: 20vh;
+            width: 200px;
+            max-width: 300px;
+            position: fixed;
+            top: 0;
+            right: -450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-style: 3rem;
+            transition: 0.3s ease;
+    
+            ul, li {
+                list-style-type: none;
+                font-size: small;
+                display: block;
+                justify-content: center;
+            }
+        }
+
+        .phoneMenu.active {
+            margin-top: 5px;
+            width: 50%;
+            
+            right: 0px;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            a {
+                display: flex;
+                padding: 5px;
+                justify-content: center;
+                
+            }
+            
+          }
+         
+    
+          .Hmenu {
+            
+            display: block;
+            text-decoration: none;
+            img{
+                height: 60px;
+                width: 55px;
+                border-radius: 5px;
+                position: absolute;
+                top: 10px;
+                left: 95.5%;
+            }
+           
+          }
+         .bg-b{
+            filter: blur(5px);
+         }
+        }
+    
+        @media(max-width:1200px){
+            .footer {
+               display: none;
+              }
+            .container {
+            display: block;
+            } 
+            .rectangle, .rectangle-droite {
+                width: 900px;
+                height: 600px;
+                margin: 50px;
+                
+            }
+            .plat, .plat24{
+                position: relative;
+                left: 25%;
+            }
+            .euro {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .flacon {
+                width: 100px;
+                height: 80px;
+            }
+            
+            .couteau {
+                height: 80px;
+            }
+            
+            .temps {
+                width: 80px;
+                height: 80px;
+            }
+            p {
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:970px){
+            
+                img, .test-video, .test-video24 {
+                    .rectangle, .rectangle-droite {
+                        width: fit-content;
+                        height: 600px;
+                        margin: 50px;
+                        
+                    }
+                    .plat, .plat24{
+                        position: relative;
+                        left: 25%;
+                    }
+                    .euro {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    
+                    .flacon {
+                        width: 100px;
+                        height: 80px;
+                    }
+                    
+                    .couteau {
+                        height: 80px;
+                    }
+                    
+                    .temps {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    p {
+                        font-size: 30px;
+                    }
+                }
+                }
+
+               
+            
+            
+            
+        
 
