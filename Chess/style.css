@@ -15,15 +15,14 @@ body {
     padding-top: 200px;
     padding-bottom: 50px;
     flex-wrap: wrap;
-
-    
-
+    animation: board-show 1000ms;
 }
 
 .square{
     height: 80px;
     width: 80px;
     position: relative;
+    animation: board-show 1500ms;
     
 }
 
@@ -97,6 +96,7 @@ a:hover {
     width: fit-content;
     height: 50px;
     box-shadow: -1px 3px 3px  #0594e7;
+      animation: txt-show 1s;
 }
 
 
@@ -110,11 +110,33 @@ a:hover {
     padding: 2% ;
     display: flex ;
     align-items: center;
-    
-    
     background-color: blanchedalmond;
+    animation: txt-show 1s;
     
 }
+
+@keyframes board-show {
+    from {
+      transform: rotate(-30deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes txt-show {
+    from {
+        transform:  translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        
+        transform: rotate(0deg) translateY(0%);
+        opacity: 1;
+    }
+  }
 
 @media(max-width:650px){
     .txtBox p {
