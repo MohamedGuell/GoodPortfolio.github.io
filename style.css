@@ -27,6 +27,7 @@ display: flex;
 justify-content: center;
     font-size: 4rem;
     color: aliceblue;
+    animation: txt-show 1s;
 }
 
 .sousNom{
@@ -34,6 +35,7 @@ justify-content: center;
     display: flex;
     justify-content: center;
     margin: -4vh;
+    animation: txt-show 1s;
 }
 
 .pres{
@@ -50,6 +52,7 @@ justify-content: center;
     margin-inline: 30vh;
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation: book-show 1s;
 }
 
 .Pboite1{
@@ -74,10 +77,12 @@ justify-content: center;
 
  .compIMG{
     width: 20%;
+     animation: txt-show 1500ms;
  }
 
  .cssIMG{
     width: 14.4%;
+     animation: txt-show 1500ms;
  }
 
  .card{
@@ -167,6 +172,29 @@ justify-content: center;
     filter: opacity(100%);
 }
 
+
+@keyframes book-show {
+    from {
+      transform: rotate(-30deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes txt-show {
+    from {
+        transform:  translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        
+        transform: rotate(0deg) translateY(0%);
+        opacity: 1;
+    }
+  }
 
 @media(max-width:1200px){
     .nom{
