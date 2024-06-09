@@ -99,7 +99,7 @@ justify-content: center;
    padding: 3vh;
    box-sizing: border-box;
    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-   
+   animation: proj-show 3s;
 }
 
 .Pboite2{
@@ -109,7 +109,8 @@ justify-content: center;
     padding: 3vh;
     box-sizing: border-box;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
- }
+    animation: proj-show 3s;
+}
 
  .compIMG{
     width: 20%;
@@ -187,10 +188,12 @@ justify-content: center;
     display: flex;
     justify-content: center;
     color: white;
+    animation: proj-show 1s;
  }
 
 .Sproj{
     justify-content: center;
+    animation: proj-show 1s;
 }
 
 .card:hover{
@@ -230,6 +233,14 @@ justify-content: center;
         opacity: 1;
     }
   }
+  @keyframes proj-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
 
   footer{
     display: flex;
@@ -237,6 +248,7 @@ justify-content: center;
     background-color: #111;
     opacity: 70%;
     width: 100%;
+    animation: txt-show 3s;
 }
 .footerContainer{
     width: 90%;
@@ -316,6 +328,7 @@ justify-content: center;
         flex-direction: column;
         margin: 0;
         color: black;
+        
     }
 
    .card {
