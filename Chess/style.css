@@ -12,12 +12,33 @@ body {
     width: 640px;
     height: 640px;
     display: flex;
-    padding-top: 200px;
+    padding-top: 50px;
     padding-bottom: 50px;
     flex-wrap: wrap;
     animation: board-show 1000ms;
 }
+#refresh{
+    margin-top: 20px;
+    margin-bottom: -20px;
+    display: flex;
+   
+    display: flex;
+    padding-top: 5px;
+    border-radius: 25%;
+    border: none;
+    flex-wrap: wrap;
+    animation: board-show 1000ms;
+    font-family: 'poppins', sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size:xx-large;
+}
 
+#refresh:hover{
+    background-color: red;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
 .square{
     height: 80px;
     width: 80px;
@@ -117,23 +138,23 @@ a:hover {
 
 @keyframes board-show {
     from {
-      transform: rotate(-30deg) translateY(-100%);
+      filter: blur(100%) ;
       opacity: 0;
     }
     to {
-      transform: rotate(0deg) translateY(0%);
+      filter: blur(0%) ;
       opacity: 1;
     }
   }
 
   @keyframes txt-show {
     from {
-        transform:  translateY(-100%);
+        filter:  blur(100%);
         opacity: 0;
     }
     to {
         
-        transform: rotate(0deg) translateY(0%);
+        filter: blur(0%) ;
         opacity: 1;
     }
   }
