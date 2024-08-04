@@ -359,14 +359,18 @@ function revertIds() {
 function victory() {
     const kings = Array.from(document.querySelectorAll('#king'))
     if (!kings.some(king => king.firstChild.classList.contains('white'))) {
+        const game = document.querySelector('#gameboard')
+        game.style.visibility = "hidden"
         playerDisplay.innerHTML = " "
-        txtBox.innerHTML = "Les noirs ont gagner !"
+        txtBox.innerHTML = '<p class= "txtBox"> Les noirs ont gagner ! </p>'
+        txtBox.style = ""
         const allSquares = document.querySelectorAll('.square')
         allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
     }
     if (!kings.some(king => king.firstChild.classList.contains('black'))) {
+        game.style.visibility = "hidden"
         playerDisplay.innerHTML = " "
-        txtBox.innerHTML = "Les blancs ont gagner !"
+        txtBox.innerHTML = '<p class= "txtBox"> Les noirs ont gagner ! </p>'
         const allSquares = document.querySelectorAll('.square')
         allSquares.forEach(square => square.firstChild?.setAttribute('draggable', false))
     }
